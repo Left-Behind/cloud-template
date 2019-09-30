@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="template-zuul" />
+        <module name="template-zipkin" />
+        <module name="template-eureka" />
+        <module name="template-provider" />
+        <module name="template-config" />
+        <module name="template-boot-admin" />
+        <module name="template-consumer" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="template-boot-admin" options="-parameters" />
+      <module name="template-config" options="-parameters" />
+      <module name="template-consumer" options="-parameters" />
+      <module name="template-eureka" options="-parameters" />
+      <module name="template-provider" options="-parameters" />
+      <module name="template-zipkin" options="-parameters" />
+      <module name="template-zuul" options="-parameters" />
+    </option>
+  </component>
+</project>
