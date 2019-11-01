@@ -6,28 +6,31 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="cloud-template" />
         <module name="template-api" />
         <module name="template-consumer" />
-        <module name="template-hystrixdashboard" />
         <module name="template-provider" />
-        <module name="template-zipkin" />
-        <module name="template-zuul" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="springcloud-zookeeper-consumer" target="1.8" />
       <module name="template-boot-admin" target="1.8" />
       <module name="template-config" target="1.8" />
       <module name="template-eureka" target="1.8" />
+      <module name="template-hystrixdashboard" target="1.8" />
+      <module name="template-zipkin" target="1.8" />
       <module name="template-zookeeper" target="1.8" />
+      <module name="template-zuul" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="cloud-template" options="-parameters" />
       <module name="template-boot-admin" options="-parameters" />
       <module name="template-config" options="-parameters" />
-      <module name="template-consumer" options="" />
+      <module name="template-consumer" options="-parameters" />
       <module name="template-eureka" options="-parameters" />
-      <module name="template-provider" options="" />
+      <module name="template-provider" options="-parameters" />
       <module name="template-zipkin" options="-parameters" />
       <module name="template-zookeeper" options="-parameters" />
       <module name="template-zuul" options="-parameters" />
