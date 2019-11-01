@@ -13,6 +13,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="dubbo-provider" target="1.8" />
       <module name="springcloud-zookeeper-consumer" target="1.8" />
       <module name="template-boot-admin" target="1.8" />
       <module name="template-config" target="1.8" />
@@ -26,6 +27,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="cloud-template" options="-parameters" />
+      <module name="dubbo-provider" options="-parameters" />
       <module name="template-boot-admin" options="-parameters" />
       <module name="template-config" options="-parameters" />
       <module name="template-consumer" options="-parameters" />

@@ -1,6 +1,8 @@
 package work.azhu.templateprovider.service.impl;
 
 import com.alibaba.dubbo.config.annotation.Service;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,17 +27,22 @@ public class DubboSeriveceImpl implements DubboService {
         return "微服务端口号："+port+"Hello, " + name + " (from Spring Boot)";
     }
 
+    @HystrixCommand
     @Override
     public String welcome() {
         return "这是一个通过zookeeper注册的服务";
     }
 
+    @HystrixCommand(commandProperties = {
+            @HystrixProperty(name="circuitBreaker.requestVolumeThreshold", value = "10"),
+            @HystrixProperty(name="execution.isolation.thread.timeoutInMilliseconds", value="2000")    })
     @Override
-    public User findById( Integer id) {
+    public User findById(Integer id) {
         User user = new User("scott");
         user.setId(id);
         return user;
     }
+    @HystrixCommand
     @Override
     public List<User> findAll() {
         List<User> users = new ArrayList<>();
