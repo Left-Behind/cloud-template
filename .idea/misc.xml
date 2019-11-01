@@ -8,7 +8,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/template-boot-admin/pom.xml" />
+        <option value="$PROJECT_DIR$/template-hystrixdashboard/pom.xml" />
       </list>
     </option>
   </component>

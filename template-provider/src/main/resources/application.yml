@@ -1,23 +1,16 @@
+debug: true
+
 server:
-  port: 8762
+  port: 9001
+
 spring:
   application:
-    name: template-provider
-  zipkin:
-    base-url: http://localhost:9411
-  boot:
-    admin:
-      client:
-        url: http://localhost:9004
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
-  instance:
-    prefer-ip-address: true
+    name: zk-service
+  cloud:
+    zookeeper:
+      connect-string: www.azhu.work:2181
 
 management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'
+  health:
+    zookeeper:
+      enabled: true

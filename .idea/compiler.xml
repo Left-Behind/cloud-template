@@ -6,24 +6,30 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="template-zuul" />
-        <module name="template-zipkin" />
-        <module name="template-eureka" />
-        <module name="template-provider" />
-        <module name="template-config" />
-        <module name="template-boot-admin" />
+        <module name="template-api" />
         <module name="template-consumer" />
+        <module name="template-hystrixdashboard" />
+        <module name="template-provider" />
+        <module name="template-zipkin" />
+        <module name="template-zuul" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="template-boot-admin" target="1.8" />
+      <module name="template-config" target="1.8" />
+      <module name="template-eureka" target="1.8" />
+      <module name="template-zookeeper" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="template-boot-admin" options="-parameters" />
       <module name="template-config" options="-parameters" />
-      <module name="template-consumer" options="-parameters" />
+      <module name="template-consumer" options="" />
       <module name="template-eureka" options="-parameters" />
-      <module name="template-provider" options="-parameters" />
+      <module name="template-provider" options="" />
       <module name="template-zipkin" options="-parameters" />
+      <module name="template-zookeeper" options="-parameters" />
       <module name="template-zuul" options="-parameters" />
     </option>
   </component>
