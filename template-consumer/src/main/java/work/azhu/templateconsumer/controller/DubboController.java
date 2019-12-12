@@ -53,6 +53,11 @@ public class DubboController {
         return "Hystrix fallback-----------抱歉，某个服务被熔断了";
 
     }
+    public String fallback(String name){
+
+        return "Hystrix fallback-----------抱歉，某个服务被熔断了";
+
+    }
     public List<User> fallbackList(){
         System.out.println("Hystrix fallback-----------抱歉，某个服务被熔断了");
         return new ArrayList<User>();
