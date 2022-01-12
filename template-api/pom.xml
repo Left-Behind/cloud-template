@@ -5,7 +5,7 @@
     <groupId>work.azhu</groupId>
     <artifactId>template-api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
     <name>template-api</name>
     <description>Dubbo api for Spring Boot</description>

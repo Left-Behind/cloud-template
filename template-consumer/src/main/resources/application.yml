@@ -1,0 +1,17 @@
+demo:
+  service:
+    version: 1.0.0
+dubbo:
+  application:
+    name: dubbo-consumer
+  consumer:
+    timeout: 5000
+  protocol:
+    name: dubbo
+  registry:
+    address: zookeeper://localhost:2181
+server:
+  port: 9009
+spring:
+  application:
+    name: dubbo-consumer

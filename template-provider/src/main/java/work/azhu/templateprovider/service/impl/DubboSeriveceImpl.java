@@ -4,9 +4,6 @@ import com.alibaba.dubbo.config.annotation.Service;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import work.azhu.templateapi.model.User.User;
 import work.azhu.templateapi.service.DubboService;
 

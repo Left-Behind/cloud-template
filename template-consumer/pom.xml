@@ -5,7 +5,7 @@
     <groupId>work.azhu</groupId>
     <artifactId>template-consumer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
     <name>template-consumer</name>
     <description>Dubbo consumer for Spring Boot</description>

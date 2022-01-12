@@ -5,7 +5,7 @@
     <groupId>work.azhu</groupId>
     <artifactId>cloud-template</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
     <modules>
         <module>template-api</module>
@@ -65,6 +65,12 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
             <version>2.0.3.RELEASE</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>jackson-module-afterburner</artifactId>
+                    <groupId>com.fasterxml.jackson.module</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
 
